@@ -67,23 +67,33 @@ public class CatalogoLivros {
     catalogoLivros.adicionarLivro("Java Guia do Programador", "Peter Jandl Junior", 2021);
     catalogoLivros.adicionarLivro("Código Limpo", "Robert C. Martin", 2009);
     catalogoLivros.adicionarLivro("O Codificador Limpo", "Robert C. Martin", 2012);
+    catalogoLivros.adicionarLivro("Harry Potter", "J. K. Rowling", 2009);
+
+    //
+    System.out.println("\nExibir todos os livros");
+    System.out.println(catalogoLivros.livroList);
 
     // Exibindo livros pelo mesmo autor
+    System.out.println("\nExibindo livros pelo mesmo autor");
     System.out.println(catalogoLivros.pesquisarPorAutor("Robert C. Martin"));
 
     // Exibindo livros pelo mesmo autor (caso em que não há livros de um autor específico)
     System.out.println(catalogoLivros.pesquisarPorAutor("Autor Inexistente"));
 
     // Exibindo livros dentro de um intervalo de anos
+    System.out.println("\npesquisa por intervalo");
     System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2010, 2022));
 
     // Exibindo livros dentro de um intervalo de anos (caso em que não há livros no intervalo)
+    System.out.println("peaquisa em um intervalo inexistente");
     System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2025, 2030));
 
     // Exibindo livros por título
+    System.out.println("\nLivros por titulo");
     System.out.println(catalogoLivros.pesquisarPorTitulo("Java Guia do Programador"));
 
     // Exibindo livros por título (caso em que não há livros com o título especificado)
+    System.out.println("\nTitulo não encontrado na pesquisa");
     System.out.println(catalogoLivros.pesquisarPorTitulo("Título Inexistente"));
     }
 
