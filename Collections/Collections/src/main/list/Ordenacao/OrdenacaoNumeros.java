@@ -46,6 +46,32 @@ public class OrdenacaoNumeros {
     }
     
     public static void main(String[] args) {
+        // criar uma instancia da classe OrdenacaoNumeros
+        OrdenacaoNumeros ordenacaoNumeros = new OrdenacaoNumeros();
+
+        // add numeros à lista
+        ordenacaoNumeros.adicionarNumero(-2);
+        ordenacaoNumeros.adicionarNumero(2);
+        ordenacaoNumeros.adicionarNumero(4);
+        ordenacaoNumeros.adicionarNumero(37);
+        ordenacaoNumeros.adicionarNumero(4);
+        ordenacaoNumeros.adicionarNumero(7);
+        ordenacaoNumeros.adicionarNumero(97);
+
+        // exibir numeros add a lista
+        ordenacaoNumeros.exibirNumeros();
+
+        // ordenar a lista em ordem ascendente
+        System.out.println("Numeros ascendente:\n" + ordenacaoNumeros.ordenarAscendente());
+
+        // exibir numeros add a lista
+        ordenacaoNumeros.exibirNumeros();
+
+        // ordenar a lista em ordem descendente
+        System.out.println("Numeros descendente:\n" + ordenacaoNumeros.ordenacaoDescendente());
+
+        // exibir numeros add a lista
+        ordenacaoNumeros.exibirNumeros();
         
     }
 }
