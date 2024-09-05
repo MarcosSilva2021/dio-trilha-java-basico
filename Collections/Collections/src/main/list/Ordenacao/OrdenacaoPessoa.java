@@ -36,6 +36,25 @@ public class OrdenacaoPessoa {
         }
     }
 
-    
+    public static void main(String[] args) {
+        // criar instancia de ordenaçãoPessoa
+        OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
+
+        // add pessoas as listas
+        ordenacaoPessoa.adicionarPessoa("Maneul", 20, 1.72);
+        ordenacaoPessoa.adicionarPessoa("Manu", 30, 1.85);
+        ordenacaoPessoa.adicionarPessoa("Carlos", 27, 1.70);
+        ordenacaoPessoa.adicionarPessoa("Maneul", 17, 1.56);
+
+        // Exibindo a lista de pessoas adicionadas
+        System.out.println( "\n Lista de pessoas adicionadas\n" + ordenacaoPessoa.pessoaList);
+
+        // ordenar e exibir por idade
+        System.out.println("\n ordenar e exibir por idade\n "+ ordenacaoPessoa.ordenarPorIdade());
+
+        // ordenar e exibir por altura
+        System.out.println("\n Exibir e ordenar por altura\n" + ordenacaoPessoa.ordenarPorAltura());     
+
+    }   
 
 }
