@@ -26,5 +26,26 @@ public class OrdenacaoNumeros {
             throw new RuntimeException(" A Lista está vazia !!!");
         }
     }
+
+    public List<Integer> ordenacaoDescendente(){
+        List<Integer> numerosDescendente = new ArrayList<>(this.numerosList);
+        if (!numerosList.isEmpty()) {
+            numerosDescendente.sort(Collections.reverseOrder());
+            return numerosDescendente ;
+        } else {
+            throw new RuntimeException(" A Lista está vazia !!!");
+        }
+    }
+
+    public void exibirNumeros(){
+        if (!numerosList.isEmpty()) {
+            System.out.println("exibir numeros da lista: \n"+ this.numerosList );
+        } else {
+            System.out.println("A lista está vazia");
+        }
+    }
     
+    public static void main(String[] args) {
+        
+    }
 }
