@@ -13,11 +13,9 @@ public class Convidado {
         this.codigoConvite = codigoConvite;
     }
 
-
     public String getNome() {
         return nome;
     }
-
 
     public int getCodigoConvite() {
         return codigoConvite;
@@ -27,16 +25,15 @@ public class Convidado {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (!(instanceof Convidado convidado))
+        if (!(obj instanceof Convidado convidado))
             return false;
-        return getCodigoConvite() == Convidado.getCodigoConvite();                   
+        return getCodigoConvite() == convidado.getCodigoConvite();                   
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getCodigoConvite());
     }
-
 
     @Override
     public String toString() {
