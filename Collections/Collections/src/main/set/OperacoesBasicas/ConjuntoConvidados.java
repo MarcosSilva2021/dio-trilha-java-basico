@@ -31,8 +31,16 @@ public class ConjuntoConvidados {
         }
     }
 
-    public int contaConvidado(){
+    public int contaConvidados(){
         return convidadosSet.size();
+    }
+
+    public void exibirConvidados(){
+        if (! convidadosSet.isEmpty()) {
+            System.out.println("\nExibindo Convidados\n"+convidadosSet);
+        } else {
+            System.out.println("O conjunto está vazio !!");
+        }
     }
 
 
