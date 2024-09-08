@@ -54,7 +54,7 @@ public class Produto implements Comparable<Produto> {
 
     @Override
     public String toString() {
-        return "{codigo : " + codigo + ", nome : " + nome + ", preco : " + preco + ", quantidade :" + quantidade + "}";
+        return "{codigo : " + codigo + " , nome : " + nome + " , preco : " + preco + " , quantidade : " + quantidade + "}";
     }
 
     @Override
@@ -67,7 +67,6 @@ class ComparotorPorPreco implements Comparator<Produto>{
     @Override
     public int compare(Produto p1, Produto p2){
         return Double.compare(p1.getPreco(), p2.getPreco());
-
     }
 }
 
