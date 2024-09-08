@@ -53,7 +53,7 @@ public class ListaTarefas {
             }
         }
         if (tarefasConcluidas.isEmpty()) {
-            throw new RuntimeException("Nenhuma tarefa Concluida !!!");            
+           System.out.println("Nenhuma tarefa Concluida !!!");            
         }
         return tarefasConcluidas;
     }
@@ -66,7 +66,7 @@ public class ListaTarefas {
             }
         }
         if (tarefasPendentes.isEmpty()) {
-            throw new RuntimeException("Nenhuma tareda Pendente");
+            throw new RuntimeException("Nenhuma tareda Pendente");            
         }
         return tarefasPendentes;
     }
@@ -117,7 +117,41 @@ public class ListaTarefas {
 
         // exibir tarefas
         listaTarefas.exibirTarefas();
-    }
-    
 
+        // remover uma tarefa
+        listaTarefas.removerTarefa("ir faculdade");
+        System.out.println("\nLista atualizada");
+        listaTarefas.exibirTarefas();
+
+        // contar as tarefas
+        System.out.println("Total de tarefas : " + listaTarefas.contarTarefas());
+
+        // obter tarefas pendetes
+        System.out.println("\nObter tarefas pendentes" + listaTarefas.obterTarefasPendentes());
+        
+        // Concluindo tarefas
+        System.out.println("Concluiu" );
+        listaTarefas.marcarTarefaConcluida("ler livros");
+        listaTarefas.marcarTarefaConcluida("programar o dia");
+
+        // obter tarefas concluidad
+        System.out.println("\nLista Concluidas :" + listaTarefas.obterTarefasConcluidas());
+
+        // marcar tarefas pendentes
+        System.out.println("\n pendentes ...");
+        listaTarefas.marcarTarefaPendente("Estudar 1 hora");
+        listaTarefas.marcarTarefaPendente("meditar");
+
+        // obter tarefas pendentes
+        System.out.println("\n lista pendente : " + listaTarefas.obterTarefasPendentes());
+
+        // Limpando a lista
+        System.out.println("Limpando a lista ");
+        listaTarefas.limparListaTarefas();
+
+        System.out.println("\nExibindo a lista :" );
+        listaTarefas.exibirTarefas();
+
+
+    }
 }
