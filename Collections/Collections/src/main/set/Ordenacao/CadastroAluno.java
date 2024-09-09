@@ -12,6 +12,10 @@ public class CadastroAluno {
         this.alunosSet = new HashSet<>();
     }
 
+    public void adicionarAluno(String nome, Long matricula, double media){
+        alunosSet.add(new Aluno(nome, matricula, media));
+    }
+
     public void removerAlunoPorMatricula(long matricula){
         Aluno alunoParaRemover = null;
         if (!alunosSet.isEmpty()) {
@@ -39,8 +43,41 @@ public class CadastroAluno {
         }
     }
 
-    public void exibirAlunosPorNota(){}
+    public void exibirAlunosPorNota(){
+        Set<Aluno> alunosPorNota = new TreeSet<>(new ComparatorNota());
+        if (!alunosSet.isEmpty()) {
+            alunosPorNota.addAll(alunosSet);
+            System.out.println(alunosPorNota);            
+        } else {
+            System.out.println("O conjunto está vazio !");
+        }
+    }
 
-    
+    public static void main(String[] args) {
+        // driando uma instancia de cadAlunos
+        CadastroAluno cadastroAluno = new CadastroAluno();
 
+        // add alunos
+        cadastroAluno.adicionarAluno("João", 123456L, 7.5);
+        cadastroAluno.adicionarAluno("maria", 123457L, 8.0);
+        cadastroAluno.adicionarAluno("Carol", 123458L, 5.0);
+        cadastroAluno.adicionarAluno("Ana", 123459L, 5.8);
+
+        System.out.println("\nExibir alunos"+ cadastroAluno.alunosSet);
+
+        // remover alunos
+        System.out.println("\n Remover matricula inexistente 000l");
+        cadastroAluno.removerAlunoPorMatricula(000L);
+        System.out.println("\nRemover matricula maria - 123457L");
+        cadastroAluno.removerAlunoPorMatricula(123457L);
+
+        System.out.println("\nExibir alunos atualizada"+ cadastroAluno.alunosSet);
+
+        System.out.println("\n odem por nome");
+        cadastroAluno.exibirAlunosPorNome();
+
+        
+        System.out.println("\n odem por nota");
+        cadastroAluno.exibirAlunosPorNota();
+    }
 }
