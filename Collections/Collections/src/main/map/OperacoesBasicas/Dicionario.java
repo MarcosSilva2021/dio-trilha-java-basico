@@ -22,7 +22,21 @@ public class Dicionario {
         }
     }
 
-    
+    public String pesquisarPorPalavra(String palavra){
+        String definicao = dicionario.get(palavra);
+        if (definicao != null) {
+            return definicao;
+        }
+        return "Termo de pesquisa não encontrado no dicionário. ";
+    }
+
+    public void exibirPalavra(){
+        if (!dicionario.isEmpty()) {
+            System.out.println(dicionario);
+        } else {
+            System.out.println("o dicionário está vazio. ");
+        }
+    }
 
     
 
