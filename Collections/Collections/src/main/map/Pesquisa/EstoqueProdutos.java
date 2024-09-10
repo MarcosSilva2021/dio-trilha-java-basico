@@ -10,6 +10,10 @@ public class EstoqueProdutos {
         this.EstoqueProdutosMap = new HashMap<>();
     }
 
+    public void adicionarProduto(long codigo, String nome, int quantidade, double preco){
+        EstoqueProdutosMap.put(codigo,new Produto(nome, preco, quantidade));
+    }
+
 
 
 }
