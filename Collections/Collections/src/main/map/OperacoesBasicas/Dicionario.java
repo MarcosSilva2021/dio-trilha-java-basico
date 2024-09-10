@@ -38,6 +38,42 @@ public class Dicionario {
         }
     }
 
-    
+    public static void main(String[] args) {
+        Dicionario dicionario = new Dicionario();
 
+        // exibir palavras
+        dicionario.exibirPalavra();
+
+        //add palavras
+    dicionario.adicionarPalavra("java", "Linguagem orientada a objetos.");
+    dicionario.adicionarPalavra("typescript", "Superset da linguagem JavaScript que adiciona tipagem estática.");
+    dicionario.adicionarPalavra("kotlin", "Linguagem moderna de programação para a JVM.");
+    dicionario.adicionarPalavra("python", "Linguagem muito utlizada na ciência de dados.");
+    
+    
+    // exibir palavras
+    dicionario.exibirPalavra();
+
+    // pesquisar por palavras o significado   
+    String deficpalavra = "java";
+    System.out.println("pesquisar palavras ..."+ deficpalavra +":");
+    System.out.println(dicionario.pesquisarPorPalavra(deficpalavra));
+
+    deficpalavra = "c#";
+    System.out.println("pesquisar palavras ..."+ deficpalavra +":");
+    System.out.println(dicionario.pesquisarPorPalavra(deficpalavra));
+
+    deficpalavra = "python";
+    System.out.println("pesquisar palavras ..."+ deficpalavra +":");
+    System.out.println(dicionario.pesquisarPorPalavra(deficpalavra));
+
+    //remover palavras
+    deficpalavra = "python";
+    System.out.println("Removendo a palavra ... "+ deficpalavra+":");
+    dicionario.removerPalavra(deficpalavra);
+
+    System.out.println("Lista atualizada :");
+    dicionario.exibirPalavra();
+
+    }
 }
