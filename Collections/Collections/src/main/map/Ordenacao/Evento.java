@@ -18,8 +18,8 @@ public class Evento {
         return atracao;
     }
 
-    
-
-    
-
+    @Override
+    public String toString() {
+        return "{nome=" + nome + ", atracao=" + atracao + "}";
+    }
 }
