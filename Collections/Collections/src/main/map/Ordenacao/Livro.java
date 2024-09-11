@@ -31,20 +31,19 @@ public class Livro {
     @Override
     public String toString() {
         return "{titulo=" + titulo + ", autor=" + autor + ", preco=" + preco + "}";
+    }    
+}
+
+class ComparatorPorPreco implements Comparator<Map.Entry<String, Livro>>{
+    @Override
+    public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
+        return Double.compare(l1.getValue().getPreco(), l2.getValue().getPreco());
+    }        
+}
+
+class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>>{
+    @Override
+    public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
+            return l1.getValue().getAutor().compareToIgnoreCase(l2.getValue().getAutor());
     }
-
-    class ComparatorPorPreco implements Comparator<Map.Entry<String, Livro>>{
-        @Override
-        public int compare(Map.Entry<String, Livro> L1, Map.Entry<String, Livro> L2) {
-            return Double.compare(L1.getValue().getPreco(), L2.getValue().getPreco());
-        }        
-    }
-
-    
-
-    
-
-
-    
-
 }
