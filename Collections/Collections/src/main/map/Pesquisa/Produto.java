@@ -4,12 +4,12 @@ public class Produto {
     // atributos
     private String nome;
     private double preco;
-    private int quantiidade;
+    private int quantidade;
 
     public Produto(String nome, double preco, int quantidade) {
         this.nome = nome;
         this.preco = preco;
-        this.quantiidade = quantidade;
+        this.quantidade = quantidade;
     }
 
     public String getNome() {
@@ -20,12 +20,12 @@ public class Produto {
         return preco;
     }
 
-    public int getQuantiidade() {
-        return quantiidade;
+    public int getQuantidade() {
+        return quantidade;
     }
 
     @Override
     public String toString() {
-        return "{nome=" + nome + ", preco=" + preco + ", quantiidade=" + quantiidade + "}";
+        return "{nome=" + nome + ", preco=" + preco + ", quantiidade=" + quantidade + "}";
     }
 }
