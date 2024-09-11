@@ -23,6 +23,54 @@ public class ContagemPalavras {
         }
     }
 
+    public int exibirContagemPalavras(){
+        int contagemTotal = 0;
+        for (int contagem : palavras.values()){
+            contagemTotal += contagem;
+        }
+        return contagemTotal;
+    }
+
+    public String encontrarPalavrasMaisFrequente(){
+        String palavraMaisFrequente = null;
+        int maiorContagem = 0;
+        for (Map.Entry<String, Integer> entry : palavras.entrySet()){
+            if (entry.getValue() > maiorContagem){
+                maiorContagem = entry.getValue();
+                palavraMaisFrequente = entry.getKey();
+            }    
+        }
+        return palavraMaisFrequente;
+    }
+
+    public static void main(String[] args) {
+        // instanciando ContPalavras
+        ContagemPalavras contagemPalavras = new ContagemPalavras();
+
+        // add palavras
+        contagemPalavras.adicionarPalavras("PHP", 2);
+        contagemPalavras.adicionarPalavras("Java", 5);
+        contagemPalavras.adicionarPalavras("C#", 2);
+        contagemPalavras.adicionarPalavras("javaScript", 9);
+        contagemPalavras.adicionarPalavras("Python",4);
+
+        // exibir
+        System.out.println("lista de palavras :" + contagemPalavras.palavras);
+
+        //exibir
+        System.out.println("Existem " + contagemPalavras.exibirContagemPalavras() + " Palavras. ");
+
+        //Ling mais frquente
+        String palavraMap = contagemPalavras.encontrarPalavrasMaisFrequente();
+        System.out.println("A palavra mais frequente é: "+ palavraMap);
+
+
+
+
+
+
+    }
+
     
 
 }
