@@ -40,7 +40,7 @@ public class EstoqueProdutos {
         return produtoMaisCaro;
     }
 
-    public Produto obteProdutoMiasBarato(){
+    public Produto obteProdutoMaisBarato(){
         Produto produtoMaisBarato = null;
         double menorPreco = Double.MAX_VALUE;
         for (Produto p : estoqueProdutosMap.values()){
@@ -79,17 +79,19 @@ public class EstoqueProdutos {
         estoqueProdutos.adicionarProduto(2L, "Tablet", 7, 100.0);
         estoqueProdutos.adicionarProduto(3L, "Monitor 4k", 10, 300);
         estoqueProdutos.adicionarProduto(4L, "Caixa de Som", 3, 25.0);
-        estoqueProdutos.adicionarProduto(6L, "Teclado sem fio", 8, 12.0);
+        estoqueProdutos.adicionarProduto(6L, "Teclado sem fio", 8, 12.0);       
 
         //exibir produtos
         System.out.println("Produtos no estoque");
         estoqueProdutos.exibirProdutos();
 
+        System.out.println("Valor total do estoque: "+estoqueProdutos.calcularValorTotalEstoque());
+
         Produto produto = estoqueProdutos.obteProdutoMaisCaro();
         System.out.println("Produto mais caro: "+ produto);
 
         
-        produto = estoqueProdutos.obteProdutoMiasBarato();
+        produto = estoqueProdutos.obteProdutoMaisBarato();
         System.out.println("produto mais Barato:" + produto);
 
         produto = estoqueProdutos.obterProdutoMaiorQuantidadeValorTotalNoEstoque();
