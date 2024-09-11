@@ -1,5 +1,8 @@
 package main.map.Ordenacao;
 
+import java.util.Comparator;
+import java.util.Map;
+
 public class Livro {
     // atributos
     private String titulo;
@@ -12,7 +15,29 @@ public class Livro {
         this.preco = preco;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    @Override
+    public String toString() {
+        return "{titulo=" + titulo + ", autor=" + autor + ", preco=" + preco + "}";
+    }
+
+    class ComparatorPorPreco implements Comparator<Map.Entry<String, Livros>>{
+        
+    }
+
     
+
 
     
 
