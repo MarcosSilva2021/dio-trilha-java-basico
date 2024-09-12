@@ -14,7 +14,7 @@ public class LivrariaOnline {
         this.livros = new HashMap<>();
     }
 
-    public void adiconarLivro(String link, Livro livro){
+    public void adicionarLivro(String link, Livro livro){
         livros.put(link, livro);
     }
 
@@ -109,6 +109,43 @@ public class LivrariaOnline {
         }
         return livrosMaisBaratos;
     }
+
+    public static void main(String[] args) {
+        // instanciando livravriaonline
+        LivrariaOnline livrariaOnline = new LivrariaOnline();
+
+        System.out.println(livrariaOnline.livros);
+
+        // add elementos
+        livrariaOnline.adicionarLivro("https://google.com ", new Livro("O magico de Oz", "Platão", 027d));
+        livrariaOnline.adicionarLivro("https://amzn.to/3EclT8Z ", new Livro("1984", "George Orwell", 50d));
+        livrariaOnline.adicionarLivro("https://amzn.to/47Umiun ", new Livro("A Revolução dos Bichos", "George Orwell", 7.05d));
+        livrariaOnline.adicionarLivro("https://amzn.to/3L1FFI6 ", new Livro("Caixa de Pássaros - Bird Box: Não Abra os Olhos", "Josh Malerman", 19.99d));
+        livrariaOnline.adicionarLivro("https://amzn.to/3OYb9jk ", new Livro("Malorie", "Josh Malerman", 5d));
+        livrariaOnline.adicionarLivro("https://amzn.to/45HQE1L ", new Livro("E Não Sobrou Nenhum", "Agatha Christie", 50d));
+        livrariaOnline.adicionarLivro("https://amzn.to/45u86q4 ", new Livro("Assassinato no Expresso do Oriente", "Agatha Christie", 5d));
+        
+        // Exibir todos os livros
+        System.out.println(livrariaOnline.livros);
+        System.out.println("\nLivros ordenados por preço: \n" + livrariaOnline.exibirLivrosOrdenadosPorPreco());
+
+        System.out.println("Livros ordenados por autor: \n" + livrariaOnline.exibirLivrosOrdenadosPorAutor());
+
+        String termoBusca = "Platão";
+        System.out.println("Pesquisar por autor .........."+ termoBusca);
+        System.out.println(livrariaOnline.pesquisarLivrosPorAutor(termoBusca));
+
+        System.out.println("Livro mais caro ...\n" + livrariaOnline.obterLivroMaisCaro());
+                
+        System.out.println("Livro mais barato ...\n" + livrariaOnline.obterLivroMaisBarato());
+        
+        // Remover um livro pelo título
+       termoBusca = "Platão";
+       System.out.println("Remover livro de titulo: "+ termoBusca);
+       livrariaOnline.removerLivro(termoBusca);
+       System.out.println(livrariaOnline.livros);
+
+}
 
 
 
