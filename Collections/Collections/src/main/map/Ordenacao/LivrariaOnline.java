@@ -87,6 +87,29 @@ public class LivrariaOnline {
         return livrosMaisCaros;
     }
 
+    public List<Livro> obterLivroMaisBarato(){
+        List<Livro> livrosMaisBaratos = new ArrayList<>();
+        double precoMaisBaixo = Double.MAX_VALUE;
+
+        if (!livros.isEmpty()) {
+            for (Livro livro : livros.values()){
+                if (livro.getPreco() < precoMaisBaixo) {
+                    precoMaisBaixo = livro.getPreco();                    
+                }
+            }
+        } else {
+            throw new RuntimeException("A livraria está vazia");
+        }
+
+        for (Map.Entry<String, Livro> entry: livros.entrySet()){
+            if (entry.getValue().getPreco() == precoMaisBaixo) {
+                Livro livroComPrecoMaisBaixo = livros.get(entry.getKey());
+                livrosMaisBaratos.add(livroComPrecoMaisBaixo);
+            }
+        }
+        return livrosMaisBaratos;
+    }
+
 
 
 
