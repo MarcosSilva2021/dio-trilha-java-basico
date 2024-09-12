@@ -53,6 +53,23 @@ public class LivrariaOnline {
         }
         return livrosOrdenadosPorAutor;
     }
+
+    public Map<String, Livro> pesquisarLivrosPorAutor(String autor){
+        Map<String, Livro> livrosPorAutor = new LinkedHashMap<>();
+        for (Map.Entry<String, Livro> entry : livros.entrySet()){
+            Livro livro = entry.getValue();
+            if (livro.getAutor().equals(autor)) {
+                livrosPorAutor.put(entry.getKey(), livro);                
+            }
+        }
+        return livrosPorAutor;
+    }
+
+    
+
+
+
+
     
 }
 
