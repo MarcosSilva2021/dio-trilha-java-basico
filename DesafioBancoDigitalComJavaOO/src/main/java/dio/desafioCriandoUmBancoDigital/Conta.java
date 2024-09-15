@@ -48,7 +48,7 @@ public abstract class Conta implements Iconta {
 
     // imprimir informações de extratos
     protected void imprimirInformacoesExtrato(){
-        System.out.println(String.format("Usuário: %s%n", this.cliente.getNome()));
+        System.out.println(String.format("Titular: %s%n", this.cliente.getNome()));
         System.out.println(String.format("Agência: %d%n", this.agencia));
         System.out.println(String.format("Numero: %d%n", this.numero));
         System.out.println(String.format("Saldo: %d%n", this.saldo));
