@@ -9,13 +9,13 @@ public class Cliente {
     private String telefone;
     private Banco banco;
     
-    public Cliente(String nome, String cpf, String profissao, String email, String telefone, Banco banco) {
+    public Cliente(String nome, String cpf, String profissao, String email, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
         this.profissao = profissao;
         this.email = email;
         this.telefone = telefone;
-        this.banco.clientes.add(this);
+       // this.banco.clientes.add(this);
     }
 
     public String getNome() {
