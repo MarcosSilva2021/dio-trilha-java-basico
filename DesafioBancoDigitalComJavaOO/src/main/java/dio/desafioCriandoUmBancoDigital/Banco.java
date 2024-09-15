@@ -6,8 +6,7 @@ import java.util.List;
 public class Banco {
     // atributos
     private String nome;
-    private List<Conta> contas;
-    
+    private List<Conta> contas;    
     List<Cliente> clientes = new ArrayList<Cliente>();
 
     // construtor
