@@ -2,7 +2,7 @@ package main.java.dio.desafioCriandoUmBancoDigital;
 
 public abstract class Conta implements Iconta {
 
-    // acesso apenas peolas classes filhas
+    // acesso apenas pelas classes filhas
     private static final int AGENCIA_PADRAO =1;
     private static int SEQUENCIAL = 1; //variavel de controle iniciada em 1 dentro da classe pra criar nº seq de conta
 
