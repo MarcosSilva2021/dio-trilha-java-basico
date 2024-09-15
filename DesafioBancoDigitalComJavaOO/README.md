@@ -2,7 +2,7 @@
 # Criando um Banco Digital com Java e Orientação a Objetos
 </br>
 <p align="justify">
-Aplicação em java de um sistema bancário com os pricipais conceitos de Orientada a Objetos. </br>
+Aplicação em java de um sistema bancário com os principais conceitos de Orientada a Objetos. </br>
 
 ### Funcionalidades 
 Trata-se do sistema de um banco digital que disponibiliza a seus clientes dois tipos de contas (corrente e poupança). </br>
